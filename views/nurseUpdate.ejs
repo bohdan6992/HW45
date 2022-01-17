@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <form>
+      <div class="create-st">
+        <table>
+          <tr>
+            <td>name:</td>
+            <td><input type="text" name="name" value="<%= student.name %>" readonly  onclick="return alert('Sorry. Yoy can\'t delete record on this level.');"></td>
+          </tr>
+          <tr>
+            <td>surname:</td>
+            <td><input type="text" name="surname" value="<%= student.surname %>" readonly  onclick="return alert('Sorry. Yoy can\'t update this record on this level.');"></td>
+          </tr>
+          <tr>
+            <td>age:</td>
+            <td><input type="text" name="surname" value="<%= student.age %>" readonly  onclick="return alert('Sorry. Yoy can\'t update this record on this level.');"></td>
+          </tr>
+          <tr class="update-block">
+            <td>blood:</td>
+            <td>
+              <select name="blood">
+                <option value="<%= student.health.blood %>"><%= student.health.blood %></option>
+                  <option value="I">I</option>
+                  <option value="II">II</option>
+                  <option value="III">III</option>
+                  <option value="IV">IV</option>
+              </select>
+          </td>
+          </tr>
+          <tr>
+            <td>resus:</td>
+            <td>
+              <select name="resus">
+                <option value="<%= student.health.resus %>"></option>
+                  <option value="Positie">Positie</option>
+                  <option value="Negative">Negative</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>width:</td>
+            <td><input type="text" name="width" value="<%= student.health.width %>"></td>
+          </tr>
+          <tr>
+            <td>weight:</td>
+            <td><input type="text" name="weight" value="<%= student.health.weight %>"></td>
+          </tr>
+        
+        </table>
+     
+        <div class="button">
+          <div class="btn-ok">
+            <a href="/nurse/update">
+              <button class="button-click" type="submit" >OK</button>
+            </a><br>
+            <div class="btn-back">
+              <a href="/nurse" class="btn btn3">Back</a>
+            </div>
+          </div> 
+        </div>
+
+      <div class="answer"></div>
+      
+    </form>
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.js"></script>
+    <script src="/js/medcard.js"></script>
+  </body>
+</html>
